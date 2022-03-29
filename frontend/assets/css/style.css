@@ -52,6 +52,9 @@ body {
     background-color: black;
     height: 30px;
 }
+.temporario-carrocel {
+    height: 80%;
+}
 .container {
     padding: 0;
     background-color: white;
