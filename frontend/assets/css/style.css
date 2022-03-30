@@ -29,10 +29,10 @@ body {
 .column {
     flex-direction: column;
 }
-.nav-item:hover {
+.nav-item .active:hover {
     background-color: var(--gray5);
 }
-.navbar-dark .navbar-nav .saldo-positivo {
+.nav-link .saldo-positivo {
     color: var(--gren1);
 }
 .navbar-dark .navbar-nav .saldo-positivo:hover {
