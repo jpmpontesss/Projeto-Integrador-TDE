@@ -48,9 +48,13 @@ body {
 }
 
 .carrocel-acoes {
+    overflow: hidden;
     min-width: 100%;
     background-color: black;
     height: 30px;
+}
+.temporario-carrocel {
+    height: 80%;
 }
 .container {
     padding: 0;
