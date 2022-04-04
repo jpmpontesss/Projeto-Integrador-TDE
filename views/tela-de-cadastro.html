@@ -11,53 +11,53 @@
     <title>Cadastro - Tropa de Elite</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid center">
-              <img src="../frontend/assets/img/logoTde.png" class="navbar-brand logo" href="#"></img>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 column">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid center">
+          <img src="../frontend/assets/img/logoTde.png" class="navbar-brand logo" href="#"></img>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 column">
 
-                  <li class="nav-item">
-                    <div class="flex row center">
-                        <a class="nav-link active mb-0" aria-current="page" href="tela-de-login.html">Perfil</a>
-                        <a class="nav-link mb-0" aria-current="page">NomeUsuário</a>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="flex row center">
-                        <a class="nav-link active mb-0" aria-current="page" href="#">Carteira</a>
-                        <a class="nav-link mb-0" aria-current="page">Minhas ações</a>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="flex row center">
-                        <a class="nav-link active mb-0" aria-current="page" href="#">Saldo</a>
-                        <a class="saldo-positivo nav-link mb-0" aria-current="page">R$ 534,27</a>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="flex row center">
-                        <a class="nav-link active mb-0" aria-current="page" href="#">Rendimentos</a>
-                        <a class="saldo-negativo nav-link mb-0" aria-current="page">R$ -387,84</a>
-                    </div>
-                  </li>
-                    
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
-          <div class="carrocel-acoes flex center">
-            <img class="temporario-carrocel" src="../frontend/assets/img/temporarioCarrocel.png">
+              <li class="nav-item">
+                <div class="flex row center">
+                    <a class="nav-link active mb-0" aria-current="page" href="tela-de-login.html">Perfil</a>
+                    <a class="nav-link mb-0" aria-current="page">NomeUsuário</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="flex row center">
+                    <a class="nav-link active mb-0" aria-current="page" href="#">Carteira</a>
+                    <a class="nav-link mb-0" aria-current="page">Minhas ações</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="flex row center">
+                    <a class="nav-link active mb-0" aria-current="page" href="#">Saldo</a>
+                    <a class="saldo-positivo nav-link mb-0" aria-current="page">R$ 534,27</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="flex row center">
+                    <a class="nav-link active mb-0" aria-current="page" href="#">Rendimentos</a>
+                    <a class="saldo-negativo nav-link mb-0" aria-current="page">R$ -387,84</a>
+                </div>
+              </li>
+                
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
           </div>
-    </header>
+        </div>
+      </nav>
+      <div class="carrocel-acoes flex center">
+        <img class="temporario-carrocel" src="../frontend/assets/img/temporarioCarrocel.png">
+      </div>
+</header>
     <form method="POST" action="/index/login/cadastro">
         <div class="box">
             <h1>Cadastro</h1>
@@ -67,7 +67,7 @@
             </div>
             <br>
             <div class="inputBox">
-                <input type="number" name="cpf" id="cpf" class="inputUser" required>
+                <input type="text" name="cpf" id="cpf" class="inputUser" required>
                 <label for="cpf" class="labelinput">CPF</label>
             </div>
             <br>

@@ -17,6 +17,7 @@ body{
 }
 .inputbox{
     position: relative;
+    background-color: none;
 }
 .inputUser{
     background: none;
@@ -37,7 +38,7 @@ body{
 }
 .inputUser:focus ~ .labelinput,
 .inputUser:valid ~ .labelinput{
-    top: -40px;
+    top: -45px;
     font-size: 13px;
     color: rgb(197, 116, 252);
 }
@@ -79,9 +80,9 @@ body{
 }
 input:checked + .sx:before {
     content: "\2022";
-    color: #ffffff;
+    color: #000;
     font-size: 20px;
-    line-height: 12px;
+    line-height: 10px;
     text-align: center;
     padding: 0.5px;   
 }
@@ -102,6 +103,17 @@ input:checked + .sx:before {
     width: 100%;
     letter-spacing: 2px;
     
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px inset;
+    background-color: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+    -webkit-text-fill-color: rgb(255, 255, 255) !important;
 }
 h1{
     text-align: center;
