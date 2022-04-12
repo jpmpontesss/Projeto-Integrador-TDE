@@ -3,6 +3,9 @@
     --red1: rgb(253, 148, 148);
     --gray5: rgb(65, 65, 65);
 }
+* {
+    background-color: orange;
+}
 
 .logo {
     width: 10%;
