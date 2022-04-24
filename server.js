@@ -54,6 +54,6 @@ app.use(routes);
 
 app.on('pronto', () => {
     app.listen(3000, () => {
-        console.log("servidor on http://localhost:3000")
+        console.log("servidor on http://localhost:3000");
     });
 })

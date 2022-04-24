@@ -13,13 +13,14 @@ body {
 }
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ecf0f1;
+    background-color: white;
 }
 .content {
-    background-color: #fff;
+    background-color: #e4e4e4;
     border-radius: 15px;
     width: 960px;
     height: 50%;
@@ -35,8 +36,6 @@ body {
     height: 100%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-
-
     left: 0;
 }
 .title {
@@ -167,7 +166,6 @@ input:-webkit-autofill
 /* second content*/
 
 .second-content {
-    position: absolute;
     display: flex;
 }
 .second-content .first-column {
