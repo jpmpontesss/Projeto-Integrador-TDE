@@ -4,7 +4,7 @@ export default class Login {
             let btnSignin = document.querySelector("#signin");
             this.eventosLogin();
         }catch(e) {
-            return
+            return;
         }
     }
     eventosLogin() {

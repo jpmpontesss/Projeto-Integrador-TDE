@@ -46,7 +46,9 @@
 .navbar-nav {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+}
+.navbar-nav li {
+    width: 100%;
 }
 .carrocel-acoes {
     overflow: hidden;
