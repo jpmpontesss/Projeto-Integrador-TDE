@@ -2,8 +2,10 @@ const mongoose = require('mongoose');
 const validator = require('validator');
 const bcryptjs = require('bcryptjs');
 const LoginSchema = new mongoose.Schema({
+    name: { type: String, required: true },
     email: { type: String, required: true },
-    password: { type: String, required: true }
+    password: { type: String, required: true },
+    adm: { type: Boolean, required: true }
 });
 const LoginModel = mongoose.model('Login', LoginSchema);
 
@@ -31,18 +33,25 @@ class Login {
         };
     }
 
-    /* async register() {
+    async register() {
+        
         this.valida();
 
         await this.userExists();
 
         if (this.errors.length > 0) return;
 
+        if (this.body.adm == 'sim') {
+            this.body.adm = true;
+        }else {
+            this.body.adm = false;
+        }
+
         const salt = bcryptjs.genSaltSync();
         this.body.password = bcryptjs.hashSync(this.body.password, salt);
 
         this.user = await LoginModel.create(this.body);
-    } */
+    }
 
     async userExists() {
         this.user = await LoginModel.findOne({email: this.body.email});
