@@ -3,22 +3,22 @@ export default class Index {
         try {
             let newArticle = document.querySelector(".news-article");
             this.carousel();
+            return;
         }catch(e) {}
 
         try {
-              let btnSignin = document.querySelector("#signin");
+            let btnSignin = document.querySelector("#signin");
               this.eventosLogin();
+              return;
           }catch(e) {}
            
         try {
           const local = document.querySelector("#publicar");
           if (local) {
             this.publicacao();
+            return
           }         
-        } catch(e) {
-          return;
-        }     
-       
+        } catch(e) {}          
     }
     carousel() {
       "use strict";
@@ -78,7 +78,6 @@ export default class Index {
     
       carouselSlider.addEventListener("mouseenter", hover);
       carouselSlider.addEventListener("mouseleave", unhover);
-
     }
 
       eventosLogin() {
@@ -100,5 +99,6 @@ export default class Index {
       document.querySelector("#infoFlex").textContent = "Retornar";
       document.querySelector("#infoFlex").href = "/";
       document.querySelector(".d-flex").remove();
+      document.querySelector("#cadastroColunista").remove();
     }
 }     
