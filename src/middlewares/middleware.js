@@ -20,8 +20,17 @@ exports.csrfMiddleware = (req, res, next) => {
 exports.loginRequired = (req, res, next) => {
     if (!req.session.user) {
         req.flash('errors', 'Você precisa fazer login');
-        req.session.save(() => res.redirect('/'));
-        return
+        req.session.save(() => res.redirect('/login/index'));
+        return;
+    }
+    next();
+}
+
+exports.admRequired = (req, res, next) => {
+    if (!req.session.user.adm) {
+        req.flash('errors', 'Você precisa ser um administrador, faça login');
+        req.session.save(() => res.redirect('/login/index'));
+        return;
     }
     next();
 }

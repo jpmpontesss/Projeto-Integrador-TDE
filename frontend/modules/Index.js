@@ -3,14 +3,22 @@ export default class Index {
         try {
             let newArticle = document.querySelector(".news-article");
             this.carousel();
-        }catch(e) {
-          try {
-                let btnSignin = document.querySelector("#signin");
-                this.eventosLogin();
-            }catch(e) {
-                return;
-          }     
-        } 
+        }catch(e) {}
+
+        try {
+              let btnSignin = document.querySelector("#signin");
+              this.eventosLogin();
+          }catch(e) {}
+           
+        try {
+          const local = document.querySelector("#publicar");
+          if (local) {
+            this.publicacao();
+          }         
+        } catch(e) {
+          return;
+        }     
+       
     }
     carousel() {
       "use strict";
@@ -22,7 +30,6 @@ export default class Index {
       const speed = .5;
     
       const width = list.offsetWidth;
-      console.log(width);
       let x = 0;
       let x2 = width;
       
@@ -44,7 +51,6 @@ export default class Index {
       }
     
       function moveSecond() {
-        console.log(list.offsetWidth);
         x2 -= speed;
     
         if (list2.offsetWidth >= Math.abs(x2)) {
@@ -63,10 +69,7 @@ export default class Index {
         a = setInterval(moveFirst, 10);
         b = setInterval(moveSecond, 10);
       }
-
-      console.log(list);
-
-      
+     
       clone();
         
     
@@ -91,5 +94,11 @@ export default class Index {
         btnSignup.addEventListener("click", function () {
             body.className = "sign-up-js";
         }); 
+    }
+
+    publicacao() {
+      document.querySelector("#infoFlex").textContent = "Retornar";
+      document.querySelector("#infoFlex").href = "/";
+      document.querySelector(".d-flex").remove();
     }
 }     
